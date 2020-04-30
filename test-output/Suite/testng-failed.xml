@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="apiAuthConcept.CookieBasedAuth">
+        <methods>
+          <include name="createJsessionId"/>
+        </methods>
+      </class> <!-- apiAuthConcept.CookieBasedAuth -->
+      <class name="apiAuthConcept.OAuth2_Concept">
+        <methods>
+          <include name="responseUsingToken"/>
+        </methods>
+      </class> <!-- apiAuthConcept.OAuth2_Concept -->
+      <class name="baseRestAPIcallingConcept.PutClass">
+        <methods>
+          <include name="postCall"/>
+        </methods>
+      </class> <!-- baseRestAPIcallingConcept.PutClass -->
+      <class name="baseRestAPIcallingConcept.GetClass">
+        <methods>
+          <include name="testCAllResponsee"/>
+        </methods>
+      </class> <!-- baseRestAPIcallingConcept.GetClass -->
+      <class name="apiAuthConcept.OAuth1_Concept">
+        <methods>
+          <include name="postTweet"/>
+        </methods>
+      </class> <!-- apiAuthConcept.OAuth1_Concept -->
+      <class name="baseRestAPIcallingConcept.DeleteClass">
+        <methods>
+          <include name="deleteCall"/>
+        </methods>
+      </class> <!-- baseRestAPIcallingConcept.DeleteClass -->
+      <class name="baseRestAPIcallingConcept.PostClass">
+        <methods>
+          <include name="postCall"/>
+        </methods>
+      </class> <!-- baseRestAPIcallingConcept.PostClass -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

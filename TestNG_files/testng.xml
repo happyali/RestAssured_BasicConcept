@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="apiAuthConcept.BasicAuthConcept" />
+			<class name="apiAuthConcept.CookieBasedAuth" />
+			<class name="apiAuthConcept.OAuth1_Concept" />
+			<class name="apiAuthConcept.OAuth2_Concept" />
+			<class name="baseRestAPIcallingConcept.PostClass" />
+			<class name="baseRestAPIcallingConcept.GetClass" />
+			<class name="baseRestAPIcallingConcept.PutClass" />
+			<class name="baseRestAPIcallingConcept.DeleteClass" />
+<!-- 		<class name="PojoConcept.CookieBasedAuthPojo"/>  -->
+			<class name="testSoapServices.XML_FilePayload" />
+			<class name="testSoapServices.XML_HttpConnection" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,39 @@
+===================== Basic API service =======================================
+Test Application:
+Pre-requisite: 
+    node 10 or above (best to install nvm 12.10.0)
+    npm install -g json-server
+    json-server --watch db.json
+                        
+Testing basic API call:
+    GET http://localhost:3000/comments/
+    GET http://localhost:3000/profile/
+    POST http://localhost:3000/posts/
+    PUT http://localhost:3000/posts/{id of postToDelete}
+    DEL http://localhost:3000/posts/{id of postToDelete}
+
+========================= Authentication: =====================================
+Preemptive Basic Auth: Implicitly sending auth credentials.
+  
+  
+========================= Authorisation: =====================================
+Challenged Basic Auth: Credentials are asked and a separate call sent it.
+
+    OAuth 1.0:
+        Login to an APP using Gmail or FB credentials
+        Posting a tweet using API:
+            Create an Twitter Developer account
+            And note the API KEY, API SECRET, CONSUMER KEY, CONSUMER SECRET
+    
+    OAuth 2.0:
+
+
+
+========================= Testing SoapUI using RestAssured =====================================
+https://www.youtube.com/watch?v=gmqjAennHbc
+https://www.youtube.com/watch?v=jun9CLm1LC4
+
+
+
+
+
