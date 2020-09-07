@@ -27,8 +27,31 @@ Challenged Basic Auth: Credentials are asked and a separate call sent it.
     
     OAuth 2.0:
 
+========================= Docker - JIRA - setup =====================================
+	This is based on DOCKER of JIRA CORE which require cookie based authentication.
+	Google Search "docker jira" --> https://hub.docker.com/r/cptactionhank/atlassian-jira/
+	Atlassian Core is required for this testing
+		docker run --detach --publish XxxX:8080 cptactionhank/atlassian-jira:latest 
+			where XxxX is port number to be used
+		Then simply navigate your preferred browser to http://[dockerhost]:8080 and finish the configuration.
+			for windows, use IPv4 Address from Ethernet adapter vEthernet (DockerNAT) as per "ipconfig" in CLI cmd
 
+	To get the JIRA API: Google Search : "JIRA session cookie api"
+		"https://developer.atlassian.com/server/jira/platform/cookie-based-authentication"
 
+	Check the payload under test at the end of this test
+	
+	"docker images" command to see a list of all images on your system.
+	"docker pull imageName" command to pull latest version of the said image
+	"docker run imageName" command where the Docker client finds the image, loads up the container and then runs a command in that container
+	"docker ps" command shows you all containers that are currently running.
+	"docekr ps -a" command to view all the ran containers
+	"docker rm containerId" command to remove the container
+	"docker run --help" to see a list of all flags it supports
+	"docker container prune" command to automatically deletes the container once it's exited from
+	
+	Refer: Resources folder of the project for more commands.
+	
 ========================= Testing SoapUI using RestAssured =====================================
 https://www.youtube.com/watch?v=gmqjAennHbc
 https://www.youtube.com/watch?v=jun9CLm1LC4

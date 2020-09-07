@@ -83,7 +83,8 @@ Below are the minimum "Enhancement Required" as per your knowledge of JAVA.
 ###### To install "Docker JIRA core" 
 		* https://hub.docker.com/r/cptactionhank/atlassian-jira/ (which will only create the task)
 		* Command: docker run --detach --publish 8086:8080 cptactionhank/atlassian-jira:latest
-		* Then simply navigate your preferred browser to http://[dockerhost]:8080
+		* Run "docker-machine ip default" , this will return the local docker host for docker 
+		* Then simply navigate your preferred browser to http://[dockerhost]:8080 ( for windows, localhost may not work so use 192.168.99.100)
 		* Finish the configuration.
 		* Refer for More details: 
 		-	https://developer.atlassian.com/server/jira/platform/jira-rest-api-examples/
