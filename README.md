@@ -85,6 +85,7 @@ Below are the minimum "Enhancement Required" as per your knowledge of JAVA.
 		* Command: docker run --detach --publish 8086:8080 cptactionhank/atlassian-jira:latest
 		* Run "docker-machine ip default" , this will return the local docker host for docker 
 		* Then simply navigate your preferred browser to http://[dockerhost]:8080 ( for windows, localhost may not work so use 192.168.99.100)
+		* Or for windows, use IPv4 Address from Ethernet adapter vEthernet (DockerNAT) as per "ipconfig" in CLI cmd
 		* Finish the configuration.
 		* Refer for More details: 
 		-	https://developer.atlassian.com/server/jira/platform/jira-rest-api-examples/
