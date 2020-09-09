@@ -1,0 +1,85 @@
+Refer: https://github.com/SeleniumHQ/docker-selenium/tree/selenium-3 (search docker selenium hub in google)
+Youtube Vlog: https://www.youtube.com/watch?v=esb1v_d5-tM&list=PL6flErFppaj1quyeiIF8Rz7nlBPOZTk6d&index=3
+
+	"docker images" command to see a list of all images on your system.
+	"docker pull imageName" command to pull latest version of the said image
+	"docker run imageName" command where the Docker client finds the image, loads up the container and then runs a command in that container
+	"docker ps" command shows you all containers that are currently running.
+	"docekr ps -a" command to view all the ran containers
+	"docker rm containerId" command to remove the container
+	"docker run --help" to see a list of all flags it supports
+	"docker container prune" command to automatically deletes the container once it's exited from
+
+Way to Run images for selenium:
+First: 
+	Using docker networking:
+	With this option, the hub and nodes will be created in the same network and they will recognize each 
+	other by their container name. A docker network needs to be created as a first step
+
+Second:
+	Via docker-compose:
+	The most simple way to start a grid is with docker-compose.yaml file that need to be in project root location, 
+	and in the same folder run docker-compose up.
+	To stop the grid and cleanup the created containers, run docker-compose down.
+	
+Legacy:
+	Using --link
+	This option can be used for a single host scenario (hub and nodes running in a single machine), 
+	but it is not recommended for longer term usage since this is a docker legacy feature. 
+	It could serve you as an option for a proof of concept, and for simplicity it is used in the examples shown from now on.
+	To run Selenium Hub on port 4545: 
+				docker run -d -p 4545:4444 --name selenium-hub selenium/hub (check the config by launching http://localhost:4545/)
+	To run Firefox Node:
+				docker run -d -P --link selenium-hub:hub selenium/node-firefox-debug
+	To run Chrome Node:
+				docker run -d -P --link selenium-hub:hub selenium/node-chrome-debug
+	
+Test Viewer in Browser:
+	Download VNC Viewer from https://www.realvnc.com/en/connect/download/viewer/windows/
+		When you are prompted for the password it is secret
+			For Firefox: 	0.0.0.0:32769 (or localhost:32769)
+			For Chrome:		0.0.0.0:32768 (or localhost:32768)
+
+===============================================================================================
+The above can be achieved ny using Zelenium  (Zalando and Selenium. )
+	Reference:
+		https://github.com/zalando/zalenium
+		https://www.youtube.com/watch?v=PEjUCkNft7s&list=PL6flErFppaj1quyeiIF8Rz7nlBPOZTk6d&index=4
+
+	With only single command we can set hub and browser nodes
+		docker pull elgalu/selenium
+		docker pull dosel/zalenium
+	And command to run Zelenium image: (where XxxX is the local port to be used)
+		  docker run --rm -ti --name zalenium -p 4547:4444 \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /tmp/videos:/home/seluser/videos \
+    --privileged dosel/zalenium start
+		
+	Thus Zelenium is used for:
+		# set selenium hub
+		# setting browser node (with latest version only) : grid console: localhost:XxxX/grid/console
+		# Test run result :  localhost:XxxX/dashboard
+		# create virtual interactive mode as VNC player with localhost console : Live preview: localhost:XxxX/grid/admin/live
+		# scale the browser node in runtime (by default latest node of chrome and firefox will be set)
+			If number of test or classes are greater than running node
+	Limitation:
+		# It support latest version of chrome and firefox only
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

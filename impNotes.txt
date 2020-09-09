@@ -41,16 +41,7 @@ Challenged Basic Auth: Credentials are asked and a separate call sent it.
 
 	Check the payload under test at the end of this test
 	
-	"docker images" command to see a list of all images on your system.
-	"docker pull imageName" command to pull latest version of the said image
-	"docker run imageName" command where the Docker client finds the image, loads up the container and then runs a command in that container
-	"docker ps" command shows you all containers that are currently running.
-	"docekr ps -a" command to view all the ran containers
-	"docker rm containerId" command to remove the container
-	"docker run --help" to see a list of all flags it supports
-	"docker container prune" command to automatically deletes the container once it's exited from
-	
-	Refer: Resources folder of the project for more commands.
+
 	
 ========================= Testing SoapUI using RestAssured =====================================
 https://www.youtube.com/watch?v=gmqjAennHbc
