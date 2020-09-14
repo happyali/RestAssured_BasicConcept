@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="dockerDemo.GCdemo" class="method navigator-link" hash-for-method="ChromeApp">ChromeApp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="dockerDemo.GCflipkart" class="method navigator-link" hash-for-method="GoogleChromeCheck">GoogleChromeCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="dockerDemo.MFFdemo" class="method navigator-link" hash-for-method="firefoxApp">firefoxApp</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="dockerDemo.GCgoogle" class="method navigator-link" hash-for-method="GoogleChromeCheck">GoogleChromeCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dockerDemo.GCopenHRM" class="method navigator-link" hash-for-method="GoogleChromeCheck">GoogleChromeCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="dockerDemo.MFFfacebook" class="method navigator-link" hash-for-method="firefoxFacebookCheck">firefoxFacebookCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,14 +137,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">dockerDemo.GCdemo</span>
+              <span class="class-name">dockerDemo.GCflipkart</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ChromeApp">
-                  </a> <!-- ChromeApp -->
-                  <span class="method-name">ChromeApp</span>
+                  <a name="GoogleChromeCheck">
+                  </a> <!-- GoogleChromeCheck -->
+                  <span class="method-name">GoogleChromeCheck</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,14 +152,44 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">dockerDemo.MFFdemo</span>
+              <span class="class-name">dockerDemo.GCgoogle</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="firefoxApp">
-                  </a> <!-- firefoxApp -->
-                  <span class="method-name">firefoxApp</span>
+                  <a name="GoogleChromeCheck">
+                  </a> <!-- GoogleChromeCheck -->
+                  <span class="method-name">GoogleChromeCheck</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dockerDemo.MFFfacebook</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="firefoxFacebookCheck">
+                  </a> <!-- firefoxFacebookCheck -->
+                  <span class="method-name">firefoxFacebookCheck</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">dockerDemo.GCopenHRM</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GoogleChromeCheck">
+                  </a> <!-- GoogleChromeCheck -->
+                  <span class="method-name">GoogleChromeCheck</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,17 +203,16 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;GCdocker&quot;&gt;
+&lt;suite parallel=&quot;classes&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;GCdocker&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;dockerDemo.GCdemo&quot;/&gt;
+      &lt;class name=&quot;dockerDemo.setup_DockerGrid&quot;/&gt;
+      &lt;class name=&quot;dockerDemo.GCgoogle&quot;/&gt;
+      &lt;class name=&quot;dockerDemo.GCflipkart&quot;/&gt;
+      &lt;class name=&quot;dockerDemo.GCopenHRM&quot;/&gt;
+      &lt;class name=&quot;dockerDemo.MFFfacebook&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- GCdocker --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;MFFdocker&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;dockerDemo.MFFdemo&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- MFFdocker --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,10 +224,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">GCdocker (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">MFFdocker (1 class)</span>
+                <span class="test-name">GCdocker (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -214,20 +250,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'firefoxApp')
-data.setCell(0, 2, 'dockerDemo.MFFdemo')
-data.setCell(0, 3, 20359);
+data.setCell(0, 1, 'GoogleChromeCheck')
+data.setCell(0, 2, 'dockerDemo.GCflipkart')
+data.setCell(0, 3, 22488);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'ChromeApp')
-data.setCell(1, 2, 'dockerDemo.GCdemo')
-data.setCell(1, 3, 11238);
+data.setCell(1, 1, 'firefoxFacebookCheck')
+data.setCell(1, 2, 'dockerDemo.MFFfacebook')
+data.setCell(1, 3, 19313);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'GoogleChromeCheck')
+data.setCell(2, 2, 'dockerDemo.GCopenHRM')
+data.setCell(2, 3, 12731);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'GoogleChromeCheck')
+data.setCell(3, 2, 'dockerDemo.GCgoogle')
+data.setCell(3, 3, 6356);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -253,18 +297,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">dockerDemo.GCdemo</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">ChromeApp</span>
+              <div class="chronological-class-name">dockerDemo.setup_DockerGrid</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">startDockerGrid</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dockerDemo.GCflipkart</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GoogleChromeCheck</span>
+                <span class="method-start">20086 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">dockerDemo.MFFdemo</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">dockerDemo.GCopenHRM</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">firefoxApp</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-name">GoogleChromeCheck</span>
+                <span class="method-start">20086 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dockerDemo.GCgoogle</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">GoogleChromeCheck</span>
+                <span class="method-start">20087 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dockerDemo.MFFfacebook</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">firefoxFacebookCheck</span>
+                <span class="method-start">20087 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">dockerDemo.setup_DockerGrid</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">stopDockerGrid</span>
+                <span class="method-start">42580 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

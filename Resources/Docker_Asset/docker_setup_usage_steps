@@ -1,3 +1,5 @@
+This demo code is for docker-selenium Gird 3 (not for Grid 4)
+
 Refer: https://github.com/SeleniumHQ/docker-selenium/tree/selenium-3 (search docker selenium hub in google)
 Youtube Vlog: https://www.youtube.com/watch?v=esb1v_d5-tM&list=PL6flErFppaj1quyeiIF8Rz7nlBPOZTk6d&index=3
 
@@ -28,7 +30,9 @@ Legacy:
 	but it is not recommended for longer term usage since this is a docker legacy feature. 
 	It could serve you as an option for a proof of concept, and for simplicity it is used in the examples shown from now on.
 	To run Selenium Hub on port 4545: 
-				docker run -d -p 4545:4444 --name selenium-hub selenium/hub (check the config by launching http://localhost:4545/)
+				docker run -d -p 4545:4444 --name selenium-hub selenium/hub
+		// instead of http://localhost:4545/grid/console
+		// here port 4545 is the port where Selenium Hub is running (can be verified by "docker ps")
 	To run Firefox Node:
 				docker run -d -P --link selenium-hub:hub selenium/node-firefox-debug
 	To run Chrome Node:
@@ -40,7 +44,30 @@ Test Viewer in Browser:
 			For Firefox: 	0.0.0.0:32769 (or localhost:32769)
 			For Chrome:		0.0.0.0:32768 (or localhost:32768)
 
-===============================================================================================
+========   Compose.yaml  =====================================================================		
+	#	Create a "docker-compose.yaml" within the project folder with the content specified in 
+		https://github.com/SeleniumHQ/docker-selenium/tree/selenium-3
+
+		In this file,
+		services:
+		  hub:
+		    image: selenium/hub
+		    ports:
+		      - "XxxX:4444"      
+				// instead of http://localhost:XxxX/grid/console
+				// here port XxxX is the port where Selenium Hub is running (can be verified by "docker ps")
+			
+	# Navigate to the docker-compose.yaml file location and run command as "docker compose up"
+	# Launch "http://localhost:4545/grid/console" to check the node and hub running status
+	# Depending upon the testng.xml scleup the node in compose file before starting hub or run
+			docker-compose scale chrome=3   (here we require total 3 nodes of Chrome)
+		
+========   Scaling the node numbers===========================================================	 
+// Here if 1 node of chrome is alreay up and running and 2 more nodes are required then	
+// run below command in the location of .yaml file		  
+			docker-compose scale chrome=3  
+			
+========   Zelenium  =========================================================================
 The above can be achieved ny using Zelenium  (Zalando and Selenium. )
 	Reference:
 		https://github.com/zalando/zalenium

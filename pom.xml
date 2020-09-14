@@ -67,16 +67,18 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M4</version>
 				<configuration>
+<!-- 					<testFailureIgnore>true</testFailureIgnore>    -->
+<!-- To avoid surefire execution failure: update surefire version to either M1, M2 or M3 and add <testFailureIgnore>  -->
 					<suiteXmlFiles>
-						<suiteXmlFile>TestNG_files/testng.xml</suiteXmlFile>
+						<suiteXmlFile>TestNG_files/testng-docker.xml</suiteXmlFile>
 					</suiteXmlFiles>
 <!--					<systemPropertyVariables>
 						<testBrowser>${browser}</testBrowser>
 						<urlTotest>${testURL}</urlTotest>
 					</systemPropertyVariables>  
-					<source>1.8</source>
+-->					<source>1.8</source>
 					<target>1.8</target>
--->				</configuration>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

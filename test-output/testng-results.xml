@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-09T16:29:06 AEST" name="Suite" finished-at="2020-09-09T16:29:27 AEST" duration-ms="20447">
+  <suite started-at="2020-09-14T12:11:46 AEST" name="Suite" finished-at="2020-09-14T12:12:34 AEST" duration-ms="47622">
     <groups>
     </groups>
-    <test started-at="2020-09-09T16:29:06 AEST" name="GCdocker" finished-at="2020-09-09T16:29:18 AEST" duration-ms="11323">
-      <class name="dockerDemo.GCdemo">
-        <test-method signature="ChromeApp()[pri:0, instance:dockerDemo.GCdemo@4df50bcc]" started-at="2020-09-09T16:29:06 AEST" name="ChromeApp" finished-at="2020-09-09T16:29:18 AEST" duration-ms="11238" status="PASS">
+    <test started-at="2020-09-14T12:11:46 AEST" name="GCdocker" finished-at="2020-09-14T12:12:34 AEST" duration-ms="47622">
+      <class name="dockerDemo.GCflipkart">
+        <test-method signature="GoogleChromeCheck()[pri:0, instance:dockerDemo.GCflipkart@78aab498]" started-at="2020-09-14T12:12:06 AEST" name="GoogleChromeCheck" finished-at="2020-09-14T12:12:29 AEST" duration-ms="22488" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ChromeApp -->
-      </class> <!-- dockerDemo.GCdemo -->
+        </test-method> <!-- GoogleChromeCheck -->
+      </class> <!-- dockerDemo.GCflipkart -->
+      <class name="dockerDemo.setup_DockerGrid">
+        <test-method is-config="true" signature="startDockerGrid()[pri:0, instance:dockerDemo.setup_DockerGrid@647fd8ce]" started-at="2020-09-14T12:11:46 AEST" name="startDockerGrid" finished-at="2020-09-14T12:12:06 AEST" duration-ms="20040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startDockerGrid -->
+        <test-method is-config="true" signature="stopDockerGrid()[pri:0, instance:dockerDemo.setup_DockerGrid@647fd8ce]" started-at="2020-09-14T12:12:29 AEST" name="stopDockerGrid" finished-at="2020-09-14T12:12:34 AEST" duration-ms="5034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDockerGrid -->
+      </class> <!-- dockerDemo.setup_DockerGrid -->
+      <class name="dockerDemo.MFFfacebook">
+        <test-method signature="firefoxFacebookCheck()[pri:0, instance:dockerDemo.MFFfacebook@1ffe63b9]" started-at="2020-09-14T12:12:06 AEST" name="firefoxFacebookCheck" finished-at="2020-09-14T12:12:26 AEST" duration-ms="19313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firefoxFacebookCheck -->
+      </class> <!-- dockerDemo.MFFfacebook -->
+      <class name="dockerDemo.GCgoogle">
+        <test-method signature="GoogleChromeCheck()[pri:0, instance:dockerDemo.GCgoogle@159f197]" started-at="2020-09-14T12:12:06 AEST" name="GoogleChromeCheck" finished-at="2020-09-14T12:12:13 AEST" duration-ms="6356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleChromeCheck -->
+      </class> <!-- dockerDemo.GCgoogle -->
+      <class name="dockerDemo.GCopenHRM">
+        <test-method signature="GoogleChromeCheck()[pri:0, instance:dockerDemo.GCopenHRM@5dd6264]" started-at="2020-09-14T12:12:06 AEST" name="GoogleChromeCheck" finished-at="2020-09-14T12:12:19 AEST" duration-ms="12731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleChromeCheck -->
+      </class> <!-- dockerDemo.GCopenHRM -->
     </test> <!-- GCdocker -->
-    <test started-at="2020-09-09T16:29:06 AEST" name="MFFdocker" finished-at="2020-09-09T16:29:27 AEST" duration-ms="20447">
-      <class name="dockerDemo.MFFdemo">
-        <test-method signature="firefoxApp()[pri:0, instance:dockerDemo.MFFdemo@59d016c9]" started-at="2020-09-09T16:29:06 AEST" name="firefoxApp" finished-at="2020-09-09T16:29:27 AEST" duration-ms="20359" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- firefoxApp -->
-      </class> <!-- dockerDemo.MFFdemo -->
-    </test> <!-- MFFdocker -->
   </suite> <!-- Suite -->
 </testng-results>
