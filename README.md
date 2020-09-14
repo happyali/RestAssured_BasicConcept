@@ -106,5 +106,9 @@ Below is a Test Application for some homework.
     PUT http://localhost:3000/posts/{id of postToDelete}
     DEL http://localhost:3000/posts/{id of postToDelete}
 
+# DOCKER Demo:
+A complete running process is define to setup and run docker in window machine.
 
+* Refer dockerDemo.allClasses **OF** Package: dockerDemo
+	and Resources --> Docker_Asset also use "testng-docker.xml" to run as maven project
 
